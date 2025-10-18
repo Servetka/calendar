@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Календарь дел</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="planner">
+    <h1>📅 Календарь дел</h1>
+
+    <form id="taskForm">
+      <input type="text" id="taskText" placeholder="Что нужно сделать?" required>
+      <input type="date" id="taskDate" required>
+      <select id="taskMarker">
+        <option value="">Без маркера</option>
+        <option value="🔥">🔥 Срочно</option>
+        <option value="🎯">🎯 Цель</option>
+        <option value="☕">☕ Отложить</option>
+        <option value="😌">😌 Спокойно</option>
+        <option value="🧠">🧠 Учёба</option>
+      </select>
+      <button type="submit">Добавить</button>
+    </form>
+
+    <div class="nav">
+      <button id="prevMonth">←</button>
+      <span id="monthLabel">Загрузка...</span>
+      <button id="nextMonth">→</button>
+    </div>
+
+    <div id="calendar"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
